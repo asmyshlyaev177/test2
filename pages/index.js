@@ -13,7 +13,9 @@ class Index extends React.Component {
   render() {
     return (
       <MyLayout>
-        <h1>Search Results</h1>
+      {this.props.shows.length
+        ? (<h1 style={{ marginTop: '10px', textAlign: 'center'}}>Search Results</h1>)
+        : ''}
           <Row gutter={16}>
           {this.props.shows.map(({show}) => (
             <Col xs={24} sm={12} md={8} lg={6} xl={4} key={show.id} style={{ marginBottom: '15px'}}>
