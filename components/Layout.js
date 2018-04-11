@@ -7,13 +7,13 @@ const MyLayout = (props) => (
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <Header />
     {props.children}
-  <style jsx global>{`
-    .layout {
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #DDD;
-    } 
-  `}</style>
+    <style jsx global>{`
+      .layout {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #DDD;
+      } 
+    `}</style>
   </Layout>
 )
 

@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import { Button, Col, Input, Layout, Row } from 'antd'
-import fetch from 'isomorphic-unfetch'
 import { updateSearchString, search } from '../store' 
 
 const Search = Input.Search
