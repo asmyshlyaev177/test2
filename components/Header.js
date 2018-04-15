@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import { Button, Col, Input, Layout, Row } from 'antd'
-import { updateSearchString, search } from '../store' 
 
 const Search = Input.Search
 const Head = Layout.Header
@@ -43,10 +42,10 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     updateSearch: payload => {
-      dispatch(updateSearchString(payload))
+      dispatch({type: 'updateSearchString', payload: payload})
     },
     search: payload => {
-      dispatch(search(payload))
+      dispatch({type: 'loadShows', payload: payload})
     }
   }
 }

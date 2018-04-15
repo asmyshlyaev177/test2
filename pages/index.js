@@ -4,6 +4,7 @@ import MyLayout from '../components/Layout'
 import { initStore } from '../store'
 import withRedux from '../utils/withRedux'
 import { Row, Col, Card } from 'antd'
+import rootSaga from '../sagas'
 
 class Index extends React.Component {
   constructor(props) {
@@ -13,9 +14,6 @@ class Index extends React.Component {
   render() {
     return (
       <MyLayout>
-        {this.props.shows.length
-          ? (<h1 style={{ marginTop: '10px', textAlign: 'center'}}>Search Results</h1>)
-          : ''}
         <Row gutter={16}>
           {this.props.shows.map(({show}) => (
             <Col xs={24} sm={12} md={8} lg={6} xl={4} key={show.id} style={{ marginBottom: '15px'}}>
